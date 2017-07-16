@@ -5,7 +5,6 @@ const TimerTray = require('./app/timerTray');
 const { app, BrowserWindow, Tray }  = electron;
 
 let mainWindow;
-let tray;
 
 app.on('ready', () => {
   mainWindow = new BrowserWindow({
@@ -21,6 +20,6 @@ app.on('ready', () => {
 
   const iconPath = path.join(__dirname, `./src/assets/${iconName}`);
 
-  tray = new TimerTray(iconPath, mainWindow);
+  new TimerTray(iconPath, mainWindow);
 
 })

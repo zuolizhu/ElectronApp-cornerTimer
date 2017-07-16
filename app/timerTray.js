@@ -5,6 +5,9 @@ class TimerTray extends Tray {
   constructor(iconPath, mainWindow) {
     super(iconPath);
     this.mainWindow = mainWindow;
+
+    this.setToolTip('Electron Timer App');
+
     this.on('click', this.handleClick.bind(this));
   }
 
